@@ -29,7 +29,7 @@ a 1N4007 diode
 
 ## 2. Wiring
 
-Wire the components to each other as shown in [this wiring schematic](VFD_Modbus_wiring.pdf).
+Wire the components to each other as shown in [this wiring schematic](VFD_Modbus_Wiring_Schematic.pdf).
 
 ---
 
