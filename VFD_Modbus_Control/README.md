@@ -41,6 +41,7 @@ Access the VFD keypad and configure these parameters:
 |-----------|----------------------|---------------------------------|
 | **F001**  | Command source       | `2` (Communication port)        |
 | **F002**  | Frequency source     | `2` (Communication port)        |
+| **F044**  | X1 Input Behavior    | `13` (emergency cut-off signal) |
 | **F163**  | Modbus slave address | `1` (default, must match UCCNC) |
 | **F164**  | Modbus baud rate     | `1` (9600 bps recommended)      |
 | **F165**  | Data format          | `3` (8N1 for RTU)               |
