@@ -31,8 +31,6 @@ a 1N4007 diode
 
 Wire the components to each other as shown in [this wiring schematic](VFD_Modbus_wiring.pdf).
 
-
-
 ---
 
 ## 3. H100 VFD Parameter Settings
