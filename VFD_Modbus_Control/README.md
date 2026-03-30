@@ -23,7 +23,7 @@ USB to RS485 Converter: [Waveshare SKU 17286](https://www.waveshare.com/wiki/USB
 
 Some wires
 
-a 5V relay that has both NC, NO and a low level trigger
+a 5 V relay that has both NC, NO and a low-level trigger
 
 a 1N4007 diode
 
@@ -180,14 +180,14 @@ Write using Modbus function `06H`. The H100 expects frequency in **0.1 Hz units*
 
 ## 6. UCCNC Macros
 
-In order for the S-words and M3, M4, and M5 commands to work properly, new M3, M4, and M5 macros must be used.
+In order for the S-words and M3, M4 and M5 commands to work properly, new M3, M4 and M5 macros must be used.
 
-In UCCNC, macros for M3, M4, and M5 are plain text `.txt` files placed in:
+In UCCNC, macros for M3, M4 and M5 are plain text `.txt` files placed in:
 ```
 C:\UCCNC\Profiles\[YourProfileName]\Macros\
 ```
 
-Drag the M3.txt, M4.txt, and M5.txt files into this repo into the above folder and replace the existing ones.
+Drag the M3.txt, M4.txt and M5.txt files into this repo into the above folder and replace the existing ones.
 
 ## 7. Troubleshooting
 
