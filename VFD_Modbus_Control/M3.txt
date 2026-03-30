@@ -1,14 +1,11 @@
-### M3.txt — Forward Run
-
-```csharp
-double rpm = AS3.Getfielddouble(869); // field ID 869 = S-word on this screen set
-double maxRPM = 24000;                // set to your spindle's actual max RPM
-double maxHz = 4000;                  // 400.0Hz max in 0.1Hz units
-
+exec.Setoutpin(2, 1);
+exec.Wait(500);
+double rpm = AS3.Getfielddouble(869);
+double maxRPM = 24000;
+double maxHz = 4000;
 ushort freq = (ushort)((rpm / maxRPM) * maxHz);
-
-exec.SetModbusregister(0, 0);         // clear control word first
-exec.Wait(2000);                      // wait for VFD to be ready
-exec.SetModbusregister(1, freq);      // set frequency
-exec.Wait(100);                       // brief pause
-exec.SetModbusregister(0, 3);         // forward run
+exec.SetModbusregister(0, 0);
+exec.Wait(2000);
+exec.SetModbusregister(1, freq);
+exec.Wait(100);
+exec.SetModbusregister(0, 3);

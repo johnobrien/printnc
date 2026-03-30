@@ -1,6 +1,4 @@
-### M5.txt — Stop
-
-```csharp
-exec.SetModbusregister(0, 0);         // clear control word = stop
-exec.Wait(2000);                      // wait for VFD to fully stop
-exec.SetModbusregister(1, 0);         // clear frequency register
+exec.SetModbusregister(0, 0);
+exec.Wait(2000);
+exec.SetModbusregister(1, 0);
+exec.Clroutpin(2, 1);
