@@ -1,6 +1,17 @@
 # modbus
 Instructions on how to implement modbus for a H100 VFD with UCCNC
 
+# disclaimer
+⚠️ WARNING & DISCLAIMER
+The information, designs, code, and instructions in this repository are provided for educational and informational purposes only. Building a CNC machine involves working with high-voltage electronics, high-speed rotating parts, and powerful motors that can cause serious injury, property damage, or death if handled improperly.
+By using any content from this repository, you acknowledge that:
+
+You assume full responsibility for your own safety and the safety of others.
+The author(s) of this repository are not liable for any injury, damage, or loss resulting from the use or misuse of this information.
+This repository makes no guarantees regarding the accuracy, completeness, or fitness of any design or instruction for any particular purpose.
+
+Always follow local electrical codes, safety regulations, and best practices. If you are unsure about any step, consult a qualified professional before proceeding.
+
 # background
 
 I found implementing modbus for a H100 VFD with UCCNC to be a bit of a pain. The H100 VFD has a complex modbus implementation, and UCCNC's modbus support is great but maybe non-intuitive. Additionally, the documentation for the H100 VFD's modbus implementation is sparse and tricky to understand.
@@ -31,21 +42,37 @@ a 1N4007 diode
 
 Wire the components to each other as shown in [this wiring schematic](VFD_Modbus_Wiring_Schematic.pdf).
 
+One quirky aspect of the wirint to note is you want the wire the Output 2 (DB 25 Pin 1) to the relay DC- **and** IN pins.
+The reason why is because when DB 25 Pin 1 goes high on the UC300ETH, the Output 2 terminal on the back of the G540
+closes to G540 PSU Ground. With a low-pass trigger, this opens the relay, which breaks the connection between X1 and 
+GND on the VFD, allowing the spindle to run.
+
+If you don't wire Output 2 to both the IN pin and DC - pin, when Output 2 goes to ground when the G540 is not powered, 
+the relay will open and the VFD will run even if there is no command from UCCNC.
+
+This is not what you want, so connect both the IN pin and DC - pin to the Output 2 terminal on the back of the G540.
+
 ---
 
 ## 3. H100 VFD Parameter Settings
 
 Access the VFD keypad and configure these parameters:
 
-| Parameter | Description          | Required Value                  |
-|-----------|----------------------|---------------------------------|
-| **F001**  | Command source       | `2` (Communication port)        |
-| **F002**  | Frequency source     | `2` (Communication port)        |
-| **F044**  | X1 Input Behavior    | `13` (emergency cut-off signal) |
-| **F163**  | Modbus slave address | `1` (default, must match UCCNC) |
-| **F164**  | Modbus baud rate     | `1` (9600 bps recommended)      |
-| **F165**  | Data format          | `3` (8N1 for RTU)               |
+| Parameter | Description                    | Required Value                                 |
+|-----------|--------------------------------|------------------------------------------------|
+| **F001**  | Command source                 | `2` (Communication port)                       |
+| **F002**  | Frequency source               | `2` (Communication port)                       |
+| **F003**  | Main Frequency                 | Match the value for your spindle               |
+| **F004**  | Reference Frequency            | Match the value for your spindle               |
+| **F005**  | Reference Limit                | Match the value for your spindle               |
+| **F044**  | X1 Input Behavior              | `13` (emergency cut-off signal)                |
+| **F143**  | Number of poles for your motor | Match the value for your spindle               |
+| **F144**  | Max RPM                        | Max RPM for your motor (see manual for syntax) |
+| **F163**  | Modbus slave address           | `1` (default, must match UCCNC)                |
+| **F164**  | Modbus baud rate               | `1` (9600 bps recommended)                     |
+| **F165**  | Data format                    | `3` (8N1 for RTU)                              |
 
+Thanks to https://www.youtube.com/watch?v=D610-kN4-xc for help with the VFD parameters.
 
 ---
 
@@ -140,45 +167,8 @@ Click **"Start loops"** — the button turns red when active. The loop also star
 
 ---
 
-## 5. H100 Modbus Register Reference
 
-### Control Word Register (0x0200 = decimal 512)
-
-Write using Modbus function `06H` (Write SingleRegister).
-
-| Value | Binary      | Command                             |
-|-------|-------------|-------------------------------------|
-| `3`   | `0000 0011` | Forward run (enable + forward bits) |
-| `5`   | `0000 0101` | Reverse run (enable + reverse bits) |
-| `0`   | `0000 0000` | Stop (clear all bits)               |
-
-> Note: Using `8` (stop bit only) does **not** reliably stop the H100. Always use `0` to stop.
-
-### Frequency Register (0x0201 = decimal 513)
-
-Write using Modbus function `06H`. The H100 expects frequency in **0.1 Hz units**:
-
-| Target Frequency | Value to Send |
-|------------------|---------------|
-| 400.0 Hz (max)   | `4000`        |
-| 200.0 Hz         | `2000`        |
-| 100.0 Hz         | `1000`        |
-
-> **Important:** The unit is 0.1 Hz, so `maxHz = 4000` for a 400 Hz spindle. Using `40000` is incorrect and will result in the wrong frequency being sent.
-
-### Input Register Address Table (read with function `04H`)
-
-| Address (Hex) | Decimal | Purpose            |
-|---------------|---------|--------------------|
-| `0x0000`      | 0       | Output frequency   |
-| `0x0001`      | 1       | Set frequency      |
-| `0x0002`      | 2       | Output current     |
-| `0x0003`      | 3       | Output speed (RPM) |
-| `0x0004`      | 4       | DC bus voltage     |
-
----
-
-## 6. UCCNC Macros
+## 5. UCCNC Macros
 
 In order for the S-words and M3, M4 and M5 commands to work properly, new M3, M4 and M5 macros must be used.
 
@@ -189,32 +179,6 @@ C:\UCCNC\Profiles\[YourProfileName]\Macros\
 
 Drag the M3.txt, M4.txt and M5.txt files into this repo into the above folder and replace the existing ones.
 
-## 7. Troubleshooting
+## 7. Done
 
-| Problem                                  | Likely Cause                            | Fix                                                                     |
-|------------------------------------------|-----------------------------------------|-------------------------------------------------------------------------|
-| `Modbus.SlaveException`                  | Wrong register address                  | Use `0x0200`/`0x0201`, not `0x2000`/`0x2001`                            |
-| SlaveException on reads                  | Wrong function code                     | Use `Read InputRegisters` (04H) for status, not `Read HoldingRegisters` |
-| Spindle doesn't respond to Modbus at all | F001/F002 not set to communication mode | Set F001=2, F002=2                                                      |
-| Spindle runs but ignores speed           | Wrong frequency scaling                 | Use `maxHz = 4000` not `40000`                                          |
-| Spindle always runs at minimum frequency | S-word variable returning 0             | Use `AS3.Getfielddouble(fieldID)` instead of `exec.Getvar(2000)`        |
-| Stop command not working                 | Wrong control word value                | Use `0` to stop, not `8`                                                |
-| M3 doesn't work after M5                 | VFD not ready after stop                | Add `Wait(2000)` and clear control word to `0` at start of M3           |
-| Communication lost after restart         | USB adapter assigned new COM port       | Check Device Manager and update COM port in plugin settings             |
-| Noise/random faults                      | Poor wiring                             | Add 120Ω termination resistor, use shielded cable                       |
-
----
-
-## 8. Key Lessons Learned
-
-1. **The H100 is NOT the same as older Huanyang drives.** The `0x2000`/`0x2001` register addresses found all over the internet are for GT/YL series drives. The H100 uses standard Modbus RTU with registers starting at `0x0200`.
-
-2. **Function code matters.** Reading status registers on the H100 requires `Read InputRegisters` (function code `04H`). Using `Read HoldingRegisters` (03H) will cause a SlaveException even if the register address is correct.
-
-3. **Frequency unit is 0.1 Hz, not 0.01 Hz.** `maxHz = 4000` for a 400 Hz max spindle, not `40000`.
-
-4. **Stop by clearing to 0.** Writing `0` to the control word is the reliable way to stop the H100. The dedicated stop bit (`8`) does not work reliably.
-
-5. **The Modbus loop must be running** before macros will work. Macros write to UCCNC's internal register table; the plugin loop pushes those values to the VFD.
-
-6. **Each UCCNC profile has its own macros folder.** Launching the wrong profile means none of your macros or plugin configuration will be present.
+You should now be able to use the M3, M4, and M5 commands in UCCNC to control the VFD.

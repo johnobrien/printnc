@@ -258,7 +258,7 @@
     ]
   },
   "meta": {
-    "filename": "VFD Voltage Control.kicad_pro",
+    "filename": "VFD_Voltage_Control_Wiring_Schematic.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -413,18 +413,18 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "VFD Voltage Control.kicad_sch",
-        "name": "Root",
+        "filename": "VFD_Voltage_Control_Wiring_Schematic.kicad_sch",
+        "name": "VFD_Voltage_Control_Wiring_Schematic",
         "uuid": "e0d9ed5d-e4a7-42b8-bba3-cf7043cae14b"
       }
     ],
-    "used_designators": "Relay1-2,K1,D1",
+    "used_designators": "Relay1-2,K1,D1-2",
     "variants": []
   },
   "sheets": [
     [
       "e0d9ed5d-e4a7-42b8-bba3-cf7043cae14b",
-      "Root"
+      "VFD_Voltage_Control_Wiring_Schematic"
     ]
   ],
   "text_variables": {},

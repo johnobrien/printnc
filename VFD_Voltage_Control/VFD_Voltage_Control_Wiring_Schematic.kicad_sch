@@ -1724,6 +1724,303 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Relay_1"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Relay"
+				(at -10.668 10.668 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Relay_1_0_0"
+				(circle
+					(center -2.032 5.08)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 5.08)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 5.08)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Relay_1_0_1"
+				(rectangle
+					(start -12.7 7.62)
+					(end 10.16 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.032 5.588)
+					(mid -1.143 5.8955)
+					(end -0.254 5.588)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 3.81) (xy 0 4.572)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Relay_1_1_1"
+				(pin input line
+					(at -15.24 6.35 0)
+					(length 2.54)
+					(name "DC+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 3.81 0)
+					(length 2.54)
+					(name "DC-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 1.27 0)
+					(length 2.54)
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 6.35 180)
+					(length 2.54)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 3.81 180)
+					(length 2.54)
+					(name "COM"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 12.7 1.27 180)
+					(length 2.54)
+					(name "NO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 5.08 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 1.27 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 5.08 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "VFD_1"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2323,6 +2620,18 @@
 		(uuid "f2304e91-3837-4495-a96c-9f33471942f2")
 	)
 	(junction
+		(at 273.05 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "017d8c0a-b0f6-4454-a71c-0a346aa5310c")
+	)
+	(junction
+		(at 200.66 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0d075ef1-8d26-4923-a933-95f4c9413b5c")
+	)
+	(junction
 		(at 273.05 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2341,6 +2650,12 @@
 		(uuid "3967b3c4-1534-4de4-979d-2485611be8d8")
 	)
 	(junction
+		(at 223.52 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "49d1e70d-f14b-465c-8030-e0c43b8b2639")
+	)
+	(junction
 		(at 207.01 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2353,10 +2668,10 @@
 		(uuid "65043b74-fff4-4ce0-be1c-83380393b1dd")
 	)
 	(junction
-		(at 270.51 49.53)
+		(at 207.01 49.53)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "6fdbad01-5480-4126-9f79-4f7cfd57abba")
+		(uuid "bfe5deb8-4272-4ee2-bd29-e4e36e1e1d18")
 	)
 	(junction
 		(at 227.33 52.07)
@@ -2369,6 +2684,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ed1fd371-65a9-482f-941d-d45df5eb543f")
+	)
+	(junction
+		(at 109.22 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ee1bb4aa-e7a2-423f-8f0d-fce4752a6f60")
 	)
 	(junction
 		(at 20.32 111.76)
@@ -2434,6 +2755,26 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 66.04) (xy 149.86 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1894a86a-5844-4a7e-b064-688dac5ed643")
+	)
+	(wire
+		(pts
+			(xy 200.66 130.81) (xy 212.09 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18fa41c8-e67b-4044-8320-7230048ddbe1")
+	)
+	(wire
+		(pts
 			(xy 214.63 40.64) (xy 227.33 40.64)
 		)
 		(stroke
@@ -2471,16 +2812,6 @@
 			(type default)
 		)
 		(uuid "1fad9b49-2d06-414c-a132-8a7060833b69")
-	)
-	(wire
-		(pts
-			(xy 200.66 49.53) (xy 270.51 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "229274e5-ccf8-42a0-acfc-7b934da452cd")
 	)
 	(wire
 		(pts
@@ -2524,6 +2855,16 @@
 	)
 	(wire
 		(pts
+			(xy 273.05 135.89) (xy 273.05 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d16bb08-0e01-452a-a719-689ed7bb010c")
+	)
+	(wire
+		(pts
 			(xy 78.74 181.61) (xy 66.04 181.61)
 		)
 		(stroke
@@ -2544,13 +2885,13 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 39.37) (xy 270.51 49.53)
+			(xy 207.01 49.53) (xy 207.01 46.99)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3006a2b6-d1be-4719-afdc-c5d846340044")
+		(uuid "30b7f76f-8b06-4251-af78-edba08207727")
 	)
 	(wire
 		(pts
@@ -2571,6 +2912,26 @@
 			(type default)
 		)
 		(uuid "35bde17d-93ed-41ec-985e-ddadaf1f726a")
+	)
+	(wire
+		(pts
+			(xy 212.09 130.81) (xy 212.09 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38772504-252f-4f16-9185-e012edd31df2")
+	)
+	(wire
+		(pts
+			(xy 223.52 118.11) (xy 223.52 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d00600e-0695-493c-84e0-8f3f1e12f754")
 	)
 	(wire
 		(pts
@@ -2614,6 +2975,16 @@
 	)
 	(wire
 		(pts
+			(xy 226.06 88.9) (xy 200.66 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "494a3256-6f73-4d94-8e63-ef027866cc12")
+	)
+	(wire
+		(pts
 			(xy 134.62 73.66) (xy 134.62 97.79)
 		)
 		(stroke
@@ -2624,7 +2995,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 49.53) (xy 270.51 130.81)
+			(xy 270.51 39.37) (xy 270.51 130.81)
 		)
 		(stroke
 			(width 0)
@@ -2641,6 +3012,26 @@
 			(type default)
 		)
 		(uuid "537faf07-401a-4f73-9f3a-9f0c522f793f")
+	)
+	(wire
+		(pts
+			(xy 149.86 130.81) (xy 172.72 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54313d9f-da65-486b-823b-d76000a7c1c3")
+	)
+	(wire
+		(pts
+			(xy 223.52 135.89) (xy 273.05 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55152b0a-b01f-4038-9747-2bc5eb3bb0f1")
 	)
 	(wire
 		(pts
@@ -2661,6 +3052,16 @@
 			(type default)
 		)
 		(uuid "59c71123-4234-41c0-ac08-89a48ddefcdb")
+	)
+	(wire
+		(pts
+			(xy 200.66 88.9) (xy 200.66 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b198791-4a4f-4adf-8e03-a3f993498c74")
 	)
 	(wire
 		(pts
@@ -2714,6 +3115,16 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 130.81) (xy 223.52 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f4c7b20-e0e6-4740-97dd-128ec50e2273")
+	)
+	(wire
+		(pts
 			(xy 226.06 83.82) (xy 186.69 83.82)
 		)
 		(stroke
@@ -2731,6 +3142,36 @@
 			(type default)
 		)
 		(uuid "787852c3-5b60-479a-b505-4b25ced2d8b4")
+	)
+	(wire
+		(pts
+			(xy 200.66 130.81) (xy 200.66 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b6fd17b-4003-4aa7-8128-8213a026bb05")
+	)
+	(wire
+		(pts
+			(xy 109.22 133.35) (xy 109.22 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "816e7a90-f517-4912-87ff-15d654d9300b")
+	)
+	(wire
+		(pts
+			(xy 212.09 118.11) (xy 223.52 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82d27c12-5777-4542-b13c-35030a13ec49")
 	)
 	(wire
 		(pts
@@ -2814,13 +3255,23 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 68.58) (xy 172.72 68.58)
+			(xy 63.5 68.58) (xy 168.91 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "aa4ac28f-6493-4123-9b85-38369828b2ed")
+	)
+	(wire
+		(pts
+			(xy 168.91 46.99) (xy 172.72 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aaeef027-fd52-4d62-be59-85ae5728cfab")
 	)
 	(wire
 		(pts
@@ -2904,6 +3355,16 @@
 	)
 	(wire
 		(pts
+			(xy 200.66 49.53) (xy 207.01 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb009431-3e10-4747-b93f-5acb90b8beb3")
+	)
+	(wire
+		(pts
 			(xy 46.99 111.76) (xy 186.69 111.76)
 		)
 		(stroke
@@ -2944,6 +3405,26 @@
 	)
 	(wire
 		(pts
+			(xy 200.66 135.89) (xy 223.52 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3c94457-4a73-40b1-921a-3be59aefb231")
+	)
+	(wire
+		(pts
+			(xy 63.5 66.04) (xy 149.86 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4b66044-f0db-4635-9c7a-502661384ab2")
+	)
+	(wire
+		(pts
 			(xy 128.27 78.74) (xy 226.06 78.74)
 		)
 		(stroke
@@ -2964,6 +3445,16 @@
 	)
 	(wire
 		(pts
+			(xy 172.72 133.35) (xy 109.22 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e064e8c6-52e6-462b-95ef-3b861c1ee7b6")
+	)
+	(wire
+		(pts
 			(xy 52.07 58.42) (xy 52.07 54.61)
 		)
 		(stroke
@@ -2974,7 +3465,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 86.36) (xy 207.01 46.99)
+			(xy 207.01 86.36) (xy 207.01 49.53)
 		)
 		(stroke
 			(width 0)
@@ -3054,7 +3545,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 68.58) (xy 172.72 52.07)
+			(xy 168.91 68.58) (xy 168.91 46.99)
 		)
 		(stroke
 			(width 0)
@@ -3071,6 +3562,16 @@
 			(justify left bottom)
 		)
 		(uuid "585c1c32-8e9e-4191-bda8-ed73693b0698")
+	)
+	(label "Set to trigger on low"
+		(at 176.53 128.27 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ef258316-eed4-45da-aaa9-6966e36826a6")
 	)
 	(symbol
 		(lib_id "Custom_Library:Relay")
@@ -3165,7 +3666,7 @@
 			(uuid "8e7388bd-e201-4f9e-92d6-e4f54335a799")
 		)
 		(instances
-			(project "VFD Voltage Control"
+			(project "VFD_Voltage_Control_Wiring_Schematic"
 				(path "/e0d9ed5d-e4a7-42b8-bba3-cf7043cae14b"
 					(reference "Relay1")
 					(unit 1)
@@ -3248,7 +3749,7 @@
 			(uuid "776da9ec-f3c3-4566-8a49-89f2808ce994")
 		)
 		(instances
-			(project "VFD Voltage Control"
+			(project "VFD_Voltage_Control_Wiring_Schematic"
 				(path "/e0d9ed5d-e4a7-42b8-bba3-cf7043cae14b"
 					(reference "R_POT1")
 					(unit 1)
@@ -3363,7 +3864,7 @@
 			(uuid "b97ee298-0ead-4fed-837f-d0d183c5d7b3")
 		)
 		(instances
-			(project "VFD Voltage Control"
+			(project "VFD_Voltage_Control_Wiring_Schematic"
 				(path "/e0d9ed5d-e4a7-42b8-bba3-cf7043cae14b"
 					(reference "G1")
 					(unit 1)
@@ -3448,9 +3949,113 @@
 			(uuid "f308fb34-9e40-4234-9d45-d39dda713161")
 		)
 		(instances
-			(project "VFD Voltage Control"
+			(project "VFD_Voltage_Control_Wiring_Schematic"
 				(path "/e0d9ed5d-e4a7-42b8-bba3-cf7043cae14b"
 					(reference "PSU3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4007")
+		(at 223.52 127 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "62f24507-2050-4117-82fe-bc1100eda42a")
+		(property "Reference" "D2"
+			(at 226.06 125.7299 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1N4007"
+			(at 226.06 128.2699 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(at 227.965 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(at 223.52 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
+			(at 223.52 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 223.52 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 223.52 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "2723d098-b341-4b95-a505-dda65d322b1e")
+		)
+		(pin "1"
+			(uuid "785145ba-40d8-4d55-9b76-f91d811a2fbe")
+		)
+		(instances
+			(project "VFD_Voltage_Control_Wiring_Schematic"
+				(path "/e0d9ed5d-e4a7-42b8-bba3-cf7043cae14b"
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -3533,7 +4138,7 @@
 			(uuid "18343d08-5c30-4fd3-9295-90857ff276e0")
 		)
 		(instances
-			(project "VFD Voltage Control"
+			(project "VFD_Voltage_Control_Wiring_Schematic"
 				(path "/e0d9ed5d-e4a7-42b8-bba3-cf7043cae14b"
 					(reference "PSU2")
 					(unit 1)
@@ -3617,7 +4222,7 @@
 			(uuid "dde632a4-9810-4c6e-b691-c3d5a13d67bc")
 		)
 		(instances
-			(project "VFD Voltage Control"
+			(project "VFD_Voltage_Control_Wiring_Schematic"
 				(path "/e0d9ed5d-e4a7-42b8-bba3-cf7043cae14b"
 					(reference "UC300ETH1")
 					(unit 1)
@@ -3768,9 +4373,111 @@
 			(uuid "3238cc1f-42f3-4d22-99b1-2e40f44a3bea")
 		)
 		(instances
-			(project "VFD Voltage Control"
+			(project "VFD_Voltage_Control_Wiring_Schematic"
 				(path "/e0d9ed5d-e4a7-42b8-bba3-cf7043cae14b"
 					(reference "VFD1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "Relay_1")
+		(lib_id "Custom_Library:Relay")
+		(at 185.42 129.54 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b5e2e158-c728-4bdd-90d9-c740b474a4a3")
+		(property "Reference" "Relay2"
+			(at 186.69 139.7 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" ""
+			(at 185.42 129.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 185.42 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185.42 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 185.42 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "3f663979-0be9-4f39-b0f5-a06d9950d5e1")
+		)
+		(pin ""
+			(uuid "6d34ae06-b9cb-4e49-9418-a85ee2b6d606")
+		)
+		(pin ""
+			(uuid "95c95df7-cd26-4c9f-87d9-57f440771578")
+		)
+		(pin "2"
+			(uuid "c466c5b9-8f4f-4eb7-9909-6e37cf9ec615")
+		)
+		(pin "1"
+			(uuid "1e05a366-830d-4276-9e26-da3b02666ac4")
+		)
+		(pin ""
+			(uuid "f03469fd-84fc-4df9-b7c0-c125af2aadd0")
+		)
+		(pin ""
+			(uuid "ec9ec62a-8072-4bf8-97a5-3c7c3fcdc785")
+		)
+		(pin ""
+			(uuid "48713b2a-dae9-4700-9ff7-c892a983d038")
+		)
+		(pin "3"
+			(uuid "5aae8647-c201-47ae-b5db-cf11f24bd329")
+		)
+		(instances
+			(project "VFD_Voltage_Control_Wiring_Schematic"
+				(path "/e0d9ed5d-e4a7-42b8-bba3-cf7043cae14b"
+					(reference "Relay2")
 					(unit 1)
 				)
 			)
@@ -3849,7 +4556,7 @@
 			(uuid "fca8e905-7739-49dd-85fa-1617ac64f72d")
 		)
 		(instances
-			(project "VFD Voltage Control"
+			(project "VFD_Voltage_Control_Wiring_Schematic"
 				(path "/e0d9ed5d-e4a7-42b8-bba3-cf7043cae14b"
 					(reference "PUMP1")
 					(unit 1)
@@ -3933,7 +4640,7 @@
 			(uuid "197eac48-86eb-4e44-a5f8-e808c6adfa32")
 		)
 		(instances
-			(project "VFD Voltage Control"
+			(project "VFD_Voltage_Control_Wiring_Schematic"
 				(path "/e0d9ed5d-e4a7-42b8-bba3-cf7043cae14b"
 					(reference "PSU1")
 					(unit 1)
@@ -4037,7 +4744,7 @@
 			(uuid "f4f08398-fdd3-4d82-a414-5d2c8a2e5ea2")
 		)
 		(instances
-			(project "VFD Voltage Control"
+			(project "VFD_Voltage_Control_Wiring_Schematic"
 				(path "/e0d9ed5d-e4a7-42b8-bba3-cf7043cae14b"
 					(reference "D1")
 					(unit 1)
@@ -4124,7 +4831,7 @@
 			(uuid "35019810-97c7-46da-aabb-48a50e60abfc")
 		)
 		(instances
-			(project "VFD Voltage Control"
+			(project "VFD_Voltage_Control_Wiring_Schematic"
 				(path "/e0d9ed5d-e4a7-42b8-bba3-cf7043cae14b"
 					(reference "SPINDLE1")
 					(unit 1)
